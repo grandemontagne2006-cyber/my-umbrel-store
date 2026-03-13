@@ -11,7 +11,7 @@ website: https://brave.com
 dependencies: []
 repo: https://github.com/linuxserver/docker-brave
 support: https://github.com/linuxserver/docker-brave/issues
-port: 3000
+port: 3935
 gallery: []
 path: ""
 defaultUsername: ""
