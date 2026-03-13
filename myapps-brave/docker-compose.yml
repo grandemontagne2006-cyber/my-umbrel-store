@@ -3,6 +3,7 @@ services:
   brave_browser:
     image: lscr.io/linuxserver/brave:latest
     container_name: myapps-brave
+    privileged: true
     security_opt:
       - seccomp:unconfined
     shm_size: "1gb"
