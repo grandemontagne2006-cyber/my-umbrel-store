@@ -5,6 +5,7 @@ services:
     container_name: myapps-brave
     security_opt:
       - seccomp:unconfined
+    shm_size: "1gb"
     environment:
       - PUID=1000
       - PGID=1000
