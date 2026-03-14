@@ -14,8 +14,16 @@ services:
       - UMASK=022
     volumes:
       - ${APP_DATA_DIR}/data:/config
+      # Passes the host's USB ID database to the container so Brave recognizes the Ledger
+      - /run/udev/data:/run/udev/data:ro 
     ports:
       - "3935:3001"
     devices:
-      - "/dev/bus/usb:/dev/bus/usb"
+      - /dev/bus/usb:/dev/bus/usb
+      # Maps the WebHID interfaces. 
+      # WARNING: The Ledger MUST be plugged in before the container starts!
+      - /dev/hidraw0:/dev/hidraw0
+      - /dev/hidraw1:/dev/hidraw1
+      - /dev/hidraw2:/dev/hidraw2
+      - /dev/hidraw3:/dev/hidraw3
     restart: unless-stopped
