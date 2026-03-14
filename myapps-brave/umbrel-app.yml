@@ -2,7 +2,7 @@ manifestVersion: 1
 id: myapps-brave
 category: productivity
 name: Brave Browser (Auto-Updating)
-version: "1.0.1"
+version: "1.0.2"
 tagline: Secure, up-to-date web browser
 description: >-
   A custom, always up-to-date build of the Brave browser maintained by LinuxServer.io.
